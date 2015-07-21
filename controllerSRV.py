@@ -193,14 +193,6 @@ def evolve():
     # ------------------------------------- Proprioception ----------------------------------------------------------------------------------------
     #~ spindle_FLEX = getMuscleSpindle(control_id = muscle_ids["forearm.L_FLEX"])
     #~ spindle_EXT  = getMuscleSpindle(control_id = muscle_ids["forearm.L_EXT"])
-##    sF1 = getMuscleSpindle(control_id = control_ids["Leg1_FLEX"])[0:2]
-##    sE1  = getMuscleSpindle(control_id = control_ids["Leg1_EXT"])[0:2]
-##    sF2 = getMuscleSpindle(control_id = control_ids["Leg2_FLEX"])[0:2]
-##    sE2  = getMuscleSpindle(control_id = control_ids["Leg2_EXT"])[0:2]
-##    sF3 = getMuscleSpindle(control_id = control_ids["Leg3_FLEX"])[0:2]
-##    sE3  = getMuscleSpindle(control_id = control_ids["Leg3_EXT"])[0:2]
-##    sF4 = getMuscleSpindle(control_id = control_ids["Leg4_FLEX"])[0:2]
-##    sE4  = getMuscleSpindle(control_id = control_ids["Leg4_EXT"])[0:2]
     # ------------------------------------- Neural Simulation -------------------------------------------------------------------------------------
     # nest.Simulate()
     
@@ -246,14 +238,6 @@ def evolve():
     
     # ------------------------------------- Muscle Activation -------------------------------------------------------------------------------------
 
-##    if eps>0.:
-##        eps-=0.001
-##    if np.random.rand()<eps:
-##        outV=0.5 + 0.5*np.sin(np.array([1.*np.random.rand() for i in range(numOut)])*t_bl)
-
-    #outV=outV/max(outV)
-##    print(outV)
-    
     speed_ = 20.0
     act_tmp         = 0.5 + 0.5*np.sin(speed_*t_bl)
     anti_act_tmp    = 1.0 - act_tmp
